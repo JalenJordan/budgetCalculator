@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>Budget Caclulator</title>
+     </head>
+     <body>
+          <fieldset>
+               <h2>HOME EXPENSES</h2>
+               <form>
+                    <label>Rent</label>
+                    <input type="text" placeholder="$ 0.00" id="rentPayments">
+                    <label>Utility</label>
+                    <input type="text" placeholder="$ 0.00" id="utilitiesPayments">
+                    <label>Maintenance</label>
+                    <input type="text" placeholder="$ 0.00"  id="maintenancePayments">
+                    <label>Repairs</label>
+                    <input type="text" placeholder="$ 0.00" id="repairPayments">
+                    <label>Taxes</label>
+                    <input type="text" placeholder="$ 0.00" id="taxPayments">
+                    <input type="submit" value="calculate" onclick="home()">
+                    <p id="total"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>FOOD EXPENSES</h2>
+               <form>
+                    <label>Groceries</label>
+                    <input type="text" placeholder="$ 0.00" id="groceryPayments">
+                    <label>Fast Food</label>
+                    <input type="text" placeholder="$ 0.00" id="fastfoodPayments">
+                    <label>Lunch Breaks</label>
+                    <input type="text" placeholder="$ 0.00" id="lunchbreakPayments">
+                    <input type="submit" value="calculate" onclick="food()">
+                    <p id="total2"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>CHILD-RELATED EXPENSES</h2>
+               <form>
+                    <label>Day Care</label>
+                    <input type="text" placeholder="$ 0.00" id="daycarePayments">
+                    <label>Extracurricular</label>
+                    <input type="text" placeholder="$ 0.00" id="extracurricularPayments">
+                    <label>New Toys</label>
+                    <input type="text" placeholder="$ 0.00" id="newtoysPayments">
+                    <input type="submit" value="calculate" onclick="child()">
+                    <p id="total3"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>DEBT OBLIGATIONS</h2>
+               <form >
+                    <label >Loan</label>
+                    <input type="text" placeholder="$ 0.00" id="loanPayments">
+                    <label>Car Note</label>
+                    <input type="text" placeholder="$ 0.00" id="carPayments">
+                    <label>Credit card</label>
+                    <input type="text" placeholder="$ 0.00" id="creditPayments">
+                    <label>Child support</label>
+                    <input type="text" placeholder="$ 0.00" id="childsupportPayments">
+                    <label>Student Loan</label>
+                    <input type="text"  placeholder="$ 0.00" name="never going away" id="studentloanPayments">
+                    <input type="submit" value="calculate" onclick="debt()">
+                    <p id="total4"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>HEALTH CARE EXPENSES</h2>
+               <form>
+                    <label>Payroll Deductions</label>
+                    <input type="text" placeholder="$ 0.00" id="payrollPayments">
+                    <label>Prescription</label>
+                    <input type="text" placeholder="$ 0.00" id="prescriptionPayments">
+                    <label>Doctor and Dentist bills</label>
+                    <input type="text" placeholder="$ 0.00" id="doctorPayments">
+                    <label>HSA</label>
+                    <input type="text" placeholder="$ 0.00" id="hsaPayments">
+                    <input type="submit" value="calculate" onclick="health()">
+                    <p id="total5"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>TRANSPORTATION EXPENSES</h2>
+               <form>
+                    <label>Public Transit</label>
+                    <input type="text" placeholder="$ 0.00" id="publictransitPayments">
+                    <label>Gasoline Costs</label>
+                    <input type="text" placeholder="$ 0.00" id="gasPayments">
+                    <label>Vehicle Maintenace</label>
+                    <input type="text" placeholder="$ 0.00" id="vehiclerepairsPayments">
+                    <label>Savings</label>
+                    <input type="text" placeholder="$ 0.00" id="savingsPayments">
+                    <input type="submit" value="calculate" onclick="transportation()">
+                    <p id="total6"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>PERSONAL CARE EXPENSES</h2>
+               <form>
+                    <label>Toiletries</label>
+                    <input type="text" placeholder="$ 0.00" id="toiletriesPayments">
+                    <label>Gym Memberships</label>
+                    <input type="text" placeholder="$ 0.00" id="gymPayments">
+                    <label>Salon / Barber</label>
+                    <input type="text" placeholder="$ 0.00" id="barberPayments">
+                    <input type="submit" value="calculate" onclick="personal()">
+                    <p id="total7"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>ENTERTAINMENT EXPENSES</h2>
+               <form>
+                    <label>Date Nights</label>
+                    <input type="text" placeholder="$ 0.00" id="datesPayments">
+                    <label>Trips to Movies</label>
+                    <input type="text" placeholder="$ 0.00" id="moviesPayments">
+                    <label>Trips to Theme Park</label>
+                    <input type="text" placeholder="$ 0.00" id="themeparkPayments">
+                    <label>Vaction Expenses</label>
+                    <input type="text" placeholder="$ 0.00" id="vactionPayments">
+                    <label>Video Games</label>
+                    <input type="text" placeholder="$ 0.00" id="videogamesPayments">
+                    <label>Electronics</label>
+                    <input type="text" placeholder="$ 0.00" id="electronicsPayments">
+                    <input type="submit" value="calculate" onclick="entertainment()">
+                    <p id="total8"></p>
+               </form>
+          </fieldset>
+          <fieldset>
+               <h2>MISCELLANEOUS</h2>
+               <form>
+                    <label>Gifts</label>
+                    <input type="text" placeholder="$ 0.00" id="giftsPayments">
+                    <label>Donations</label>
+                    <input type="text" placeholder="$ 0.00" id="donationsPayments">
+                    <label>Spouse Spending</label>
+                    <input type="text" placeholder="$ 0.00" id="spousePayments">
+                    <label>Other</label>
+                    <input type="text" placeholder="$ 0.00" id="otherPayments">
+                    <input type="submit" value="calculate" onclick="miscellaneous()">
+                    <p id="total9"></p>
+               </form>
+          </fieldset>
+          <label>Income</label>
+          <input type="text" placeholder="$ 0.00" id="income">
+          <input type="submit" value="calculate" onclick="final()">
+          <h2 id="total10"></h2>
+     </body>
+     <script>
+          function home(){
+               event.preventDefault()
+               var rent = parseFloat(document.getElementById("rentPayments").value) || 0;
+               var utilities = parseFloat(document.getElementById("utilitiesPayments").value) || 0;
+               var maintenace = parseFloat(document.getElementById("maintenancePayments").value) || 0;
+               var repair = parseFloat(document.getElementById("repairPayments").value) || 0;
+               var tax = parseFloat(document.getElementById("taxPayments").value) || 0;
+               var total = document.getElementById("total");
+               var together = rent + (utilities + maintenace + repair + tax);
+               total.innerHTML = "Monthly expenses are " +  " $ " + together ;   
+               return together;
+          }
+          function food(){
+               event.preventDefault()
+               var grocery = parseFloat(document.getElementById("groceryPayments").value) || 0;
+               var fast = parseFloat(document.getElementById("fastfoodPayments").value) || 0;
+               var lunch = parseFloat(document.getElementById("lunchbreakPayments").value) || 0;
+               var total = document.getElementById("total2");
+               var together = grocery + (fast + lunch) || 0;
+               total.innerHTML = "Monthly expenses are " + " $ " + together;
+               return together;
+
+          }
+          function child(){
+               event.preventDefault()
+               var daycare = parseFloat(document.getElementById("daycarePayments").value) || 0;
+               var extracurricular = parseFloat(document.getElementById("extracurricularPayments").value) || 0;
+               var newtoys = parseFloat(document.getElementById("newtoysPayments").value) || 0;
+               var together = daycare + (extracurricular + newtoys) || 0;
+               var total = document.getElementById("total3");
+               total.innerHTML= "Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function debt(){
+               event.preventDefault()
+               var loan = parseFloat(document.getElementById("loanPayments").value) || 0;
+               var car = parseFloat(document.getElementById("carPayments").value) || 0;
+               var credit = parseFloat(document.getElementById("creditPayments").value) || 0;
+               var childsupport = parseFloat(document.getElementById("childsupportPayments").value) || 0;
+               var studentloan = parseFloat(document.getElementById("studentloanPayments").value) || 0;
+               var together = loan + (car + credit + childsupport + studentloan) || 0;
+               var total = document.getElementById("total4");
+               total.innerHTML ="Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function health(){
+               event.preventDefault()
+               var payroll = parseFloat(document.getElementById("payrollPayments").value) || 0;
+               var prescription = parseFloat(document.getElementById("prescriptionPayments").value) || 0;
+               var doctor = parseFloat(document.getElementById("doctorPayments").value) || 0;
+               var hsa = parseFloat(document.getElementById("hsaPayments").value) || 0;
+               var together = payroll + (prescription + doctor + hsa) || 0;
+               var total = document.getElementById("total5");
+               total.innerHTML = "Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function transportation(){
+               event.preventDefault()
+               var publictransit = parseFloat(document.getElementById("publictransitPayments").value) || 0;
+               var gas = parseFloat(document.getElementById("gasPayments").value) || 0;
+               var vehiclerepairs = parseFloat(document.getElementById("vehiclerepairsPayments").value) || 0;
+               var savings = parseFloat(document.getElementById("savingsPayments").value) || 0;
+               var together = publictransit + (gas + vehiclerepairs + savings) || 0;
+               var total = document.getElementById("total6");
+               total.innerHTML = "Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function personal(){
+               event.preventDefault()
+               var toiletries = parseFloat(document.getElementById("toiletriesPayments").value) || 0;
+               var gym = parseFloat(document.getElementById("gymPayments").value) || 0;
+               var barber = parseFloat(document.getElementById("barberPayments").value) || 0;
+               var together = toiletries + (gym + barber) || 0;
+               var total = document.getElementById("total7");
+               total.innerHTML = "Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function entertainment(){
+               event.preventDefault()
+               var dates = parseFloat(document.getElementById("datesPayments").value) || 0;
+               var movies = parseFloat(document.getElementById("moviesPayments").value) || 0;
+               var theme = parseFloat(document.getElementById("themeparkPayments").value) || 0;
+               var vaction = parseFloat(document.getElementById("vactionPayments").value) || 0;
+               var videogames = parseFloat(document.getElementById("videogamesPayments").value) || 0;
+               var electronics = parseFloat(document.getElementById("electronicsPayments").value) || 0;
+               var together = dates + (movies + theme + vaction + videogames + electronics) || 0;
+               var total = document.getElementById("total8");
+               total.innerHTML = "Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function miscellaneous(){
+               event.preventDefault()
+               var gifts = parseFloat(document.getElementById("giftsPayments").value) || 0;
+               var donations = parseFloat(document.getElementById("donationsPayments").value) || 0;
+               var spouse = parseFloat(document.getElementById("spousePayments").value) || 0;
+               var other = parseFloat(document.getElementById("otherPayments").value) || 0;
+               var together = gifts + (donations + spouse + other) || 0;
+               var total = document.getElementById("total9");
+               total.innerHTML = "Monthly expenses are " + " $ " + together;
+               return together;
+          }
+          function final(){
+               event.preventDefault()
+               var income = parseFloat(document.getElementById("income").value) || 0;
+               var last = income - (home() - food() - child() - health() - transportation() - personal() - miscellaneous());
+               var total = document.getElementById("total10");
+               total.innerHTML = "You have "+ " $ " + last + "  left in your budget";
+          }
+     </script>
+</html>
